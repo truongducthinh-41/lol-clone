@@ -858,9 +858,9 @@ function AppContent() {
                 <p>Tôi có Tài Khoản Riot</p>
                 {/* Đã cập nhật class tại đây để ăn CSS nút bo tròn */}
                 <button className="btn-login-acc-modal" onClick={() => {
-                      setIsPlayModalOpen(false);
-                      navigate('/dang-nhap');
-                }}>
+                        setIsPlayModalOpen(false);
+                        navigate('/dang-nhap');
+                      }}>
                   ĐĂNG NHẬP
                 </button>
               </div>
