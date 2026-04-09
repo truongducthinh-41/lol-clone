@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; /* <--- 1. Import công cụ chuyển trang */
+import { useNavigate } from 'react-router-dom'; 
 import './HomePage.css'; 
 
 function HomePage() {
   const [isPlayModalOpen, setIsPlayModalOpen] = useState(false);
-  const navigate = useNavigate(); /* <--- 2. Khởi tạo công cụ */
+  const navigate = useNavigate(); 
 
   return (
     <div className="home-page-container">

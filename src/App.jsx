@@ -793,6 +793,9 @@ function Footer() {
 function AppContent() {
   const [isPlayModalOpen, setIsPlayModalOpen] = useState(false);
   const location = useLocation();
+
+  const navigate = useNavigate();
+  
   const isAuthPage = location.pathname === '/tao-tai-khoan' || location.pathname === '/dang-nhap';
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -807,7 +810,7 @@ function AppContent() {
   const handleLogout = () => {
     localStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
-    window.location.href = '/'; 
+    navigate('/'); 
   };
 
   return (
