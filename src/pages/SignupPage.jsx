@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 function SignupPage() {
   const [step, setStep] = useState(1);
@@ -238,7 +238,7 @@ function SignupPage() {
                       // 1. Lưu trạng thái đã đăng nhập vào bộ nhớ trình duyệt
                       localStorage.setItem('isLoggedIn', 'true');
                       // 2. Dùng window.location.href để load lại trang chủ cho nó nhận diện thẻ VIP
-                      Maps('/'); 
+                      Navigate('/'); 
                     }}
                   >
                     Chấp nhận

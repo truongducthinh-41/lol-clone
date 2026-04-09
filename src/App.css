@@ -1044,7 +1044,7 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-image: url('/SU-bg.jpg'); /* Ảnh nền của bạn */
+  background-image: url('/lol-clone/SU-bg.jpg'); /* Ảnh nền của bạn */
   background-size: cover;
   background-position: center;
   overflow: scroll;
@@ -1396,7 +1396,7 @@
   align-items: center;     /* Căn giữa form theo chiều dọc */
   height: 100vh;
   width: 100vw;
-  background-image: url('/SU-bg.jpg'); /* Ảnh nền của bạn */
+  background-image: url('/lol-clone/SU-bg.jpg'); /* Ảnh nền của bạn */
   overflow: hidden;
   background-color: #111;
 }

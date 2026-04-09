@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ function LoginPage() {
     // Cấp "thẻ VIP" đăng nhập thành công
     localStorage.setItem('isLoggedIn', 'true');
     // Chuyển hướng về trang chủ
-    Maps('/');
+    Navigate('/');
   };
 
   return (
