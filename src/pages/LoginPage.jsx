@@ -21,7 +21,7 @@ function LoginPage() {
 
       {/* --- LOGO GÓC TRÁI --- */}
       <div className="signup-logo-top-left">
-        <img src="./riot-gray-removebg-preview.png" alt="Riot Games" />
+        <img src="/lol-clone/riot-gray-removebg-preview.png" alt="Riot Games" />
       </div>
 
       {/* --- CHÂN TRANG GÓC TRÁI DƯỚI --- */}

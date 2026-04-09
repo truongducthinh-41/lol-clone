@@ -21,7 +21,7 @@ function SignupPage() {
       
       {/* --- LOGO --- */}
       <div className="signup-logo-top-left">
-        <img src="./riot-gray-removebg-preview.png" alt="Riot Games" />
+        <img src="/lol-clone/riot-gray-removebg-preview.png" alt="Riot Games" />
       </div>
 
       {/* --- CHÂN TRANG --- */}
