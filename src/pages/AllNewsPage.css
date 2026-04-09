@@ -1,0 +1,187 @@
+/* =========================================
+   1. KHUNG CHỨA TOÀN BỘ TRANG (HEADER)
+   ========================================= */
+.all-news-wrapper {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.all-news-container {
+  padding-top: 120px;
+  padding-bottom: 50px;
+  padding-left: 5%;
+  background-color: #091428;
+}
+
+.all-news-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 5rem; /* Đã thu nhỏ lại một chút cho cân đối */
+  font-weight: 900;
+  font-style: italic;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* =========================================
+   2. KHU VỰC LƯỚI BÀI VIẾT (SỬA BỆNH "RỘNG QUÁ ĐÀ")
+   ========================================= */
+.all-news-body {
+  background-color: #ffffff; 
+  padding: 60px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa toàn bộ nội dung */
+}
+
+.news-grid-page {
+  width: 100%;
+  max-width: 1100px; /* Ép giới hạn khung lưới, không cho rộng ngoác ra */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Bắt buộc chia 3 cột */
+  gap: 30px; /* Khoảng cách giữa các bài */
+}
+
+/* Từng thẻ bài viết */
+.news-card-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Khung ảnh: Ép tỷ lệ 16:9 để không bị méo ảnh */
+.news-image-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative; 
+}
+
+.news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không méo */
+  transition: transform 0.4s ease;
+}
+
+/* Hiệu ứng phóng to mượt mà khi rê chuột */
+.news-card-item:hover .news-img {
+  transform: scale(1.05); 
+}
+
+/* Ô vuông đen góc phải ảnh */
+.news-icon-corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.corner-icon {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+/* =========================================
+   3. PHẦN CHỮ BÊN DƯỚI ẢNH
+   ========================================= */
+.news-text-box {
+  padding: 20px 0;
+}
+
+.news-meta-info {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.news-cate {
+  color: #c8aa6e; 
+  font-weight: 800;
+}
+
+.news-div { color: #d1d1d1; }
+.news-dt { color: #777; }
+
+.news-headline {
+  font-size: 1.3rem; /* Căn chỉnh size chữ vừa mắt */
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.news-card-item:hover .news-headline {
+  color: #00bef0; /* Đổi màu xanh cyan khi rê chuột */
+}
+
+.news-snippet {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* =========================================
+   4. NÚT "HIỆN THÊM +"
+   ========================================= */
+.load-more-container {
+  width: 100%;
+  max-width: 1100px; /* Bằng với max-width của lưới bài viết */
+  margin-top: 50px; 
+  padding-top: 30px;
+  text-align: center;
+  border-top: 1px solid #e1e1e1;
+  position: relative; 
+}
+
+/* Vạch vàng trang trí */
+.load-more-container::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #c8aa6e; 
+}
+
+.load-more-btn {
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #111;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+}
+
+.load-more-btn:hover {
+  color: #c8aa6e; 
+}
+
+.plus-icon {
+  color: #c8aa6e; 
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+/* =========================================
+   5. ÉP KHUNG CHO ĐIỆN THOẠI & TABLET
+   ========================================= */
+@media (max-width: 1024px) {
+  .news-grid-page { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .news-grid-page { grid-template-columns: 1fr; }
+  .all-news-title { font-size: 3rem; } /* Thu nhỏ chữ ở Header trên Mobile */
+}

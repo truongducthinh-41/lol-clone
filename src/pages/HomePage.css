@@ -1,0 +1,110 @@
+.play-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85); /* Nền đen mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999; /* Đảm bảo nổi lên trên tất cả mọi thứ */
+}
+
+/* Khối nội dung chính màu xanh đen */
+.play-modal-content {
+  background-color: #091428; /* Xanh đen đặc trưng Riot */
+  width: 100%;
+  max-width: 800px;
+  padding: 80px 40px 60px;
+  position: relative;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Nút tắt X */
+.play-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #c8aa6e; /* Màu vàng Gold */
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #111;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.play-modal-close:hover {
+  background-color: #f0e6d2; /* Sáng lên khi di chuột */
+}
+
+/* Tiêu đề */
+.play-modal-title {
+  font-size: 2.8rem;
+  font-style: italic;
+  font-family: serif; /* Font có chân cho giống bản gốc */
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+/* 2 Cột lựa chọn */
+.play-modal-options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.play-modal-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+.play-modal-option p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Nút TẠO TÀI KHOẢN (Màu xanh dương sáng) */
+.btn-create-acc {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #0bc6e3;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-create-acc:hover { background-color: #4ce1f7; }
+
+/* Nút ĐĂNG NHẬP (Màu Vàng nhạt) */
+.btn-login-acc {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #cdb473;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-login-acc:hover { background-color: #f0e6d2; }
+
+/* Đường viền xanh lá siêu mỏng ở dưới cùng */
+.play-modal-bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0ac8b9;
+}

@@ -1,0 +1,20 @@
+/* Xóa mọi khoảng cách mặc định của trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Đảm bảo toàn trang web luôn tràn viền 100% */
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Cấm cuộn ngang để không bị thanh cuộn thừa */
+  font-family: Arial, sans-serif; /* Bạn có thể đổi font sau */
+}
+
+/* Đặt lại root của React để nó chiếm toàn bộ không gian */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
