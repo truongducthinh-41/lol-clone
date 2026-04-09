@@ -7,12 +7,13 @@ function LoginPage() {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    // Cấp "thẻ VIP" đăng nhập thành công
-    localStorage.setItem('isLoggedIn', 'true');
-    // Chuyển hướng về trang chủ
-    window.location.href = '#/'; 
+  localStorage.setItem('isLoggedIn', 'true');
+  navigate('/');
+  
+  setTimeout(() => {
     window.location.reload();
-  };
+  }, 100);
+};
 
   return (
     <div className="login-page-wrapper">

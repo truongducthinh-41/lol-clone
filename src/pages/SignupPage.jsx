@@ -235,11 +235,17 @@ function SignupPage() {
                     }}
                     onClick={() => {
                       alert("CHÚC MỪNG! BẠN ĐÃ TẠO TÀI KHOẢN THÀNH CÔNG.");
-                      // 1. Lưu trạng thái đã đăng nhập vào bộ nhớ trình duyệt
+                      
+                      // 1. Lưu thẻ VIP
                       localStorage.setItem('isLoggedIn', 'true');
-                      // 2. Dùng window.location.href để load lại trang chủ cho nó nhận diện thẻ VIP
-                      window.location.href = '#/'; 
-                      window.location.reload();; 
+                      
+                      // 2. Chuyển về trang chủ bằng lệnh chuẩn của React (nhớ là chữ n viết thường)
+                      navigate('/'); 
+                      
+                      // 3. Đợi 0.1 giây cho trang chuyển hẳn rồi mới F5 để cập nhật Header
+                      setTimeout(() => {
+                        window.location.reload();
+                      }, 100);
                     }}
                   >
                     Chấp nhận
