@@ -3,7 +3,7 @@ import './App.css';
 import AllNewsPage from './pages/AllNewsPage'; 
 import { HashRouter, Routes, Route, useNavigate, Link, useLocation } from 'react-router-dom';
 import GameUpdatesPage from './pages/GameUpdatesPage';
-import EsportsPage from './pages./EsportsPage';
+import EsportsPage from './pages/EsportsPage';
 import DevTeamPage from './pages/DevTeamPage';
 import MediaPage from './pages/MediaPage';
 import CommunityPage from './pages/CommunityPage';
