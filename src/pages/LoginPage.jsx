@@ -10,7 +10,8 @@ function LoginPage() {
     // Cấp "thẻ VIP" đăng nhập thành công
     localStorage.setItem('isLoggedIn', 'true');
     // Chuyển hướng về trang chủ
-    Navigate('/');
+    window.location.href = '#/'; 
+    window.location.reload();
   };
 
   return (

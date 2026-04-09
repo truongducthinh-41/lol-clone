@@ -238,7 +238,8 @@ function SignupPage() {
                       // 1. Lưu trạng thái đã đăng nhập vào bộ nhớ trình duyệt
                       localStorage.setItem('isLoggedIn', 'true');
                       // 2. Dùng window.location.href để load lại trang chủ cho nó nhận diện thẻ VIP
-                      Navigate('/'); 
+                      window.location.href = '#/'; 
+                      window.location.reload();; 
                     }}
                   >
                     Chấp nhận
