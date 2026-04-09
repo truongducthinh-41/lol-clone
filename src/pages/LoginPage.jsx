@@ -10,7 +10,7 @@ function LoginPage() {
     // Cấp "thẻ VIP" đăng nhập thành công
     localStorage.setItem('isLoggedIn', 'true');
     // Chuyển hướng về trang chủ
-    window.location.href = '/';
+    Maps('/');
   };
 
   return (
@@ -21,7 +21,7 @@ function LoginPage() {
 
       {/* --- LOGO GÓC TRÁI --- */}
       <div className="signup-logo-top-left">
-        <img src="/riot-gray-removebg-preview.png" alt="Riot Games" />
+        <img src="./riot-gray-removebg-preview.png" alt="Riot Games" />
       </div>
 
       {/* --- CHÂN TRANG GÓC TRÁI DƯỚI --- */}

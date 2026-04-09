@@ -505,7 +505,7 @@
 .skin-section {
   width: 100%;
   padding: 120px 0;
-  background-image: url('/skin-bg.jpg'); /* Gọi ảnh nền từ thư mục public */
+  background-image: url('./skin-bg.jpg'); /* Gọi ảnh nền từ thư mục public */
   background-size: cover; /* Phóng to ảnh vừa khít khung */
   background-position: center;
   background-color: #0b1114; /* Màu dự phòng nếu ảnh lỗi */
@@ -1044,7 +1044,7 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-image: url('/SU-bg.jpg'); /* Ảnh nền của bạn */
+  background-image: url('./SU-bg.jpg'); /* Ảnh nền của bạn */
   background-size: cover;
   background-position: center;
   overflow: scroll;
@@ -1396,7 +1396,7 @@
   align-items: center;     /* Căn giữa form theo chiều dọc */
   height: 100vh;
   width: 100vw;
-  background-image: url('/SU-bg.jpg'); /* Ảnh nền của bạn */
+  background-image: url('./SU-bg.jpg'); /* Ảnh nền của bạn */
   overflow: hidden;
   background-color: #111;
 }

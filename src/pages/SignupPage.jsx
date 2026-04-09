@@ -21,7 +21,7 @@ function SignupPage() {
       
       {/* --- LOGO --- */}
       <div className="signup-logo-top-left">
-        <img src="/riot-gray-removebg-preview.png" alt="Riot Games" />
+        <img src="./riot-gray-removebg-preview.png" alt="Riot Games" />
       </div>
 
       {/* --- CHÂN TRANG --- */}
@@ -238,7 +238,7 @@ function SignupPage() {
                       // 1. Lưu trạng thái đã đăng nhập vào bộ nhớ trình duyệt
                       localStorage.setItem('isLoggedIn', 'true');
                       // 2. Dùng window.location.href để load lại trang chủ cho nó nhận diện thẻ VIP
-                      window.location.href = '/'; 
+                      Maps('/'); 
                     }}
                   >
                     Chấp nhận

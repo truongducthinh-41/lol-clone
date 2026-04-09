@@ -3,69 +3,69 @@ import './App.css';
 import AllNewsPage from './pages/AllNewsPage'; 
 import { HashRouter, Routes, Route, useNavigate, Link, useLocation } from 'react-router-dom';
 import GameUpdatesPage from './pages/GameUpdatesPage';
-import EsportsPage from './pages/EsportsPage';
+import EsportsPage from './pages./EsportsPage';
 import DevTeamPage from './pages/DevTeamPage';
 import MediaPage from './pages/MediaPage';
 import CommunityPage from './pages/CommunityPage';
 import RiotGamesPage from './pages/RiotGamesPage';
 import SignupPage from './pages/SignupPage';
-import LoginPage from './pages/LoginPage'; /* <--- ĐÂY LÀ DÒNG BẠN BỊ THIẾU KHIẾN WEB TRẮNG XÓA */
+import LoginPage from './pages/LoginPage'; 
 
 // ==========================================
 // 1. DỮ LIỆU (DATA)
 // ==========================================
 const newsData = [
   {
-    id: 1, image: '/Es1.avif', category: 'ESPORTS', date: '24/3/2026',
+    id: 1, image: './Es1.avif', category: 'ESPORTS', date: '24/3/2026',
     title: 'Kỳ 2 LCP 2026', description: '2 suất tham dự MSI đang chờ đợi khi các đội tuyển trở lại LCP.'
   },
   {
-    id: 2, image: '/Es2.avif', category: 'ESPORTS', date: '22/3/2026',
+    id: 2, image: './Es2.avif', category: 'ESPORTS', date: '22/3/2026',
     title: 'Top Các Pha Xử Lý - Bán Kết', description: 'Những pha xử lý kiến tạo meta cháy máy: hãy cùng xem lại highlight từ Bán Kết First Stand 2026.'
   },
   {
-    id: 3, image: '/Es3.avif', category: 'ESPORTS', date: '22/3/2026',
+    id: 3, image: './Es3.avif', category: 'ESPORTS', date: '22/3/2026',
     title: 'Cập Nhật Về MSI Và CKTG', description: 'Địa điểm thi đấu, thông tin về vé tham dự và hơn thế nữa!'
   },
   {
-    id: 4, image: '/Es4.avif', category: 'ESPORTS', date: '21/3/2026',
+    id: 4, image: './Es4.avif', category: 'ESPORTS', date: '21/3/2026',
     title: 'Top Các Pha Xử Lý - Group Stage', description: 'Hãy sẵn sàng theo dõi các đội dẫn đầu cuộc đua trong những trận đấu đầu tiên của First Stand 2026.'
   },
   {
-    id: 5, image: '/Es5.avif', category: 'CẬP NHẬT TRÒ CHƠI', date: '18/3/2026',
+    id: 5, image: './Es5.avif', category: 'CẬP NHẬT TRÒ CHƠI', date: '18/3/2026',
     title: 'Thông Tin Bản Cập Nhật Liên Minh Huyền Thoại 26.6', description: 'Đã đến thời điểm cho First Stand và cập nhật của Shyvana!'
   },
   {
-    id: 6, image: '/Es6.avif', category: 'CẬP NHẬT TRÒ CHƠI', date: '4/3/2026',
+    id: 6, image: './Es6.avif', category: 'CẬP NHẬT TRÒ CHƠI', date: '4/3/2026',
     title: 'Trailer Mùa 1 Phần II', description: 'Vương Quốc đang vẫy gọi. Liệu bạn có sẵn sàng chiến đấu? Mùa 1: Vì Demacia tiếp tục với Phần II.'
   },
   {
-    id: 7, image: '/Es7.avif', category: 'CẬP NHẬT TRÒ CHƠI', date: '4/3/2026',
+    id: 7, image: './Es7.avif', category: 'CẬP NHẬT TRÒ CHƠI', date: '4/3/2026',
     title: 'Thông Tin Bản Cập Nhật 26.5', description: 'Chào mừng đến với bản cập nhật chính thức của First Stand - giải đấu quốc tế lớn đầu tiên trong năm!'
   },
   {
-    id: 8, image: '/Es8.avif', category: 'CẬP NHẬT TRÒ CHƠI', date: '3/3/2026',
+    id: 8, image: './Es8.avif', category: 'CẬP NHẬT TRÒ CHƠI', date: '3/3/2026',
     title: 'Tiêu Điểm Tướng Shyvana', description: 'Giải phóng cơn thịnh nộ với cập nhật mới cho Shyvana, Long Nữ.'
   },
   {
-    id: 9, image: '/Es9.avif', category: 'ĐỘI NGŨ PHÁT TRIỂN', date: '2/3/2026',
+    id: 9, image: './Es9.avif', category: 'ĐỘI NGŨ PHÁT TRIỂN', date: '2/3/2026',
     title: 'Đội Ngũ Phát Triển: Phân Bổ Từ MMR đến Xếp Hạng', description: 'Mục tiêu của chúng tôi dành cho chế độ Xếp Hạng, cùng một số điều chỉnh nhằm đảm bảo hành trình leo hạng của bạn luôn công bằng và giàu tính cạnh tranh.'
   },
   {
-    id: 10, image: '/Es10.avif', category: 'ĐỘI NGŨ PHÁT TRIỂN', date: '2/3/2026',
+    id: 10, image: './Es10.avif', category: 'ĐỘI NGŨ PHÁT TRIỂN', date: '2/3/2026',
     title: '/đnpt: Lệnh Cấm Vì Lạm Dụng Chat Nghiêm Trọng', description: 'Chúng tôi sẽ có biện pháp xử lý cho hành vi lạm dụng chat nghiêm trọng bắt đầu từ phiên bản 26.5.'
   },
   {
-    id: 11, image: '/Es11.avif', category: 'ESPORTS', date: '2/3/2026',
+    id: 11, image: './Es11.avif', category: 'ESPORTS', date: '2/3/2026',
     title: 'Giải Thích Thể Thức First Stand 2026', description: '7 ngày. 6 khu vực. 1 nhà vô địch. Đây là những điều cần biết về giải đấu lớn đầu tiên của năm 2026.'
   },
   {
-    id: 12, image: '/Es12.avif', category: 'ESPORTS', date: '2/3/2026',
+    id: 12, image: './Es12.avif', category: 'ESPORTS', date: '2/3/2026',
     title: 'Giới Thiệu FST 2026', description: 'Những điều bạn cần biết về giải đấu FST tại São Paulo!'
   },
   {
     id: 13, 
-    image: '/Es13.avif', 
+    image: './Es13.avif', 
     category: 'CẬP NHẬT TRÒ CHƠI', 
     date: '19/2/2026',
     title: 'Thông Tin Bản Cập Nhật Liên Minh Huyền Thoại 26.4', 
@@ -73,7 +73,7 @@ const newsData = [
   },
   {
     id: 14, 
-    image: '/Es14.avif', 
+    image: './Es14.avif', 
     category: 'CẬP NHẬT TRÒ CHƠI', 
     date: '4/2/2026',
     title: 'Thông Tin Bản Cập Nhật 26.3', 
@@ -81,7 +81,7 @@ const newsData = [
   },
   {
     id: 15, 
-    image: '/Es15.avif', 
+    image: './Es15.avif', 
     category: 'CẬP NHẬT TRÒ CHƠI', 
     date: '28/1/2026',
     title: 'Tết Nguyên Đán 2026', 
@@ -89,7 +89,7 @@ const newsData = [
   },
   {
     id: 16, 
-    image: '/Es16.avif', 
+    image: './Es16.avif', 
     category: 'CẬP NHẬT TRÒ CHƠI', 
     date: '22/1/2026',
     title: 'Viego Quỷ Vực Quân Vương | Trailer Ra Mắt - Liên Minh Huyền Thoại', 
@@ -97,7 +97,7 @@ const newsData = [
   },
   {
     id: 17, 
-    image: '/Es17.jpg', 
+    image: './Es17.jpg', 
     category: 'CẬP NHẬT TRÒ CHƠI', 
     date: '22/1/2026',
     title: 'Thông Tin Bản Cập Nhật 26.2', 
@@ -105,7 +105,7 @@ const newsData = [
   },
   {
     id: 18, 
-    image: '/Es18.avif', 
+    image: './Es18.avif', 
     category: 'CẬP NHẬT TRÒ CHƠI', 
     date: '16/1/2026',
     title: 'EP1: Vũ Điệu Tài Lộc | Tết Nguyên Đán 2026', 
@@ -113,7 +113,7 @@ const newsData = [
   },
   {
     id: 19, 
-    image: '/Es19.avif', 
+    image: './Es19.avif', 
     category: 'CẬP NHẬT TRÒ CHƠI', 
     date: '9/1/2026',
     title: 'Trang Phục Trác Việt: Viego Quỷ Vực Quân Vương', 
@@ -121,7 +121,7 @@ const newsData = [
   },
   {
     id: 20, 
-    image: '/Es20.avif', 
+    image: './Es20.avif', 
     category: 'CẬP NHẬT TRÒ CHƠI', 
     date: '8/1/2026',
     title: 'Cập Nhật Từ ĐNPT: Vì Demacia', 
@@ -129,7 +129,7 @@ const newsData = [
   },
   {
     id: 21, 
-    image: '/Es21.avif', 
+    image: './Es21.avif', 
     category: 'ESPORTS', 
     date: '16/1/2026',
     title: 'VCS 2026 CÔNG BỐ QUY TRÌNH TÌM KIẾM ĐỐI TÁC CHO SUẤT THAM DỰ KHÁCH MỜI', 
@@ -137,7 +137,7 @@ const newsData = [
   },
   {
     id: 22, 
-    image: '/Es22.avif', 
+    image: './Es22.avif', 
     category: 'ESPORTS', 
     date: '16/1/2026',
     title: 'Co-streamer Trực Tuyến Cho Kỳ 1 LCP 2026', 
@@ -145,7 +145,7 @@ const newsData = [
   },
   {
     id: 23, 
-    image: '/Es23.avif', 
+    image: './Es23.avif', 
     category: 'ESPORTS', 
     date: '15/1/2026',
     title: 'GIỚI THIỆU VCS 2026', 
@@ -153,7 +153,7 @@ const newsData = [
   },
   {
     id: 24, 
-    image: '/Es24.avif', 
+    image: './Es24.avif', 
     category: 'ESPORTS', 
     date: '8/1/2026',
     title: 'Khởi Động Mùa Giải 2026: Esports LMHT', 
@@ -161,7 +161,7 @@ const newsData = [
   },
   {
     id: 25, 
-    image: '/Es25.avif', 
+    image: './Es25.avif', 
     category: 'ESPORTS', 
     date: '5/1/2026',
     title: 'Giới Thiệu Mùa Giải LCP 2026', 
@@ -169,7 +169,7 @@ const newsData = [
   },
   {
     id: 26, 
-    image: '/Es26.avif', 
+    image: './Es26.avif', 
     category: 'ESPORTS', 
     date: '22/12/2025',
     title: 'Ground Zero Gaming Sẽ Gia Nhập LCP Trong Mùa Giải 2026', 
@@ -177,7 +177,7 @@ const newsData = [
   },
   {
     id: 27, 
-    image: '/Es27.avif', 
+    image: './Es27.avif', 
     category: 'ĐỘI NGŨ PHÁT TRIỂN', 
     date: '2/3/2026',
     title: 'Tóm Tắt Cập Nhật Từ ĐNPT', 
@@ -185,7 +185,7 @@ const newsData = [
   },
   {
     id: 28, 
-    image: '/Es28.avif', 
+    image: './Es28.avif', 
     category: 'ĐỘI NGŨ PHÁT TRIỂN', 
     date: '2/3/2026',
     title: 'Cập Nhật Từ ĐNPT: Xếp Hạng, Shyvana & Cập Nhật Khác', 
@@ -193,7 +193,7 @@ const newsData = [
   },
   {
     id: 29, 
-    image: '/Es29.avif', 
+    image: './Es29.avif', 
     category: 'ĐỘI NGŨ PHÁT TRIỂN', 
     date: '8/1/2026',
     title: 'Tóm Tắt: Cập Nhật Từ ĐNPT - Vì Demacia', 
@@ -201,7 +201,7 @@ const newsData = [
   },
   {
     id: 30, 
-    image: '/Es30.avif', 
+    image: './Es30.avif', 
     category: 'ĐỘI NGŨ PHÁT TRIỂN', 
     date: '1/12/2025',
     title: 'ĐNPT: Mùa 1 2026 - Chủ Đề, Lối Chơi & Cập Nhật Khác', 
@@ -209,7 +209,7 @@ const newsData = [
   },
   {
     id: 31, 
-    image: '/Es31.avif', 
+    image: './Es31.avif', 
     category: 'ĐỘI NGŨ PHÁT TRIỂN', 
     date: '1/12/2025',
     title: 'Tóm Tắt: Mùa 1 2026 - Chủ Đề, Lối Chơi & Cập Nhật Khác Từ ĐNPT', 
@@ -217,7 +217,7 @@ const newsData = [
   },
   {
     id: 32, 
-    image: '/Es32.avif', 
+    image: './Es32.avif', 
     category: 'ĐỘI NGŨ PHÁT TRIỂN', 
     date: '1/12/2025',
     title: '/đnpt: Đấu Siêu Tốc Nhanh Hơn', 
@@ -225,7 +225,7 @@ const newsData = [
   },
   {
     id: 33, 
-    image: '/Es33.avif', 
+    image: './Es33.avif', 
     category: 'ĐỘI NGŨ PHÁT TRIỂN', 
     date: '1/12/2025',
     title: '/đnpt: Tổng Quan Lối Chơi Mùa 1 năm 2026', 
@@ -233,7 +233,7 @@ const newsData = [
   },
   {
     id: 34, 
-    image: '/Es34.avif', 
+    image: './Es34.avif', 
     category: 'ĐỘI NGŨ PHÁT TRIỂN', 
     date: '14/11/2025',
     title: 'Lịch Trình Phát Triển ĐTCL: Truyền Thuyết & Huyền Thoại', 
@@ -241,7 +241,7 @@ const newsData = [
   },
   {
     id: 35, 
-    image: '/Es35.avif', 
+    image: './Es35.avif', 
     category: 'ĐỘI NGŨ PHÁT TRIỂN', 
     date: '14/10/2025',
     title: 'Phác Thảo Từ Nhà Phát Triển: ARAM', 
@@ -249,7 +249,7 @@ const newsData = [
   },
   {
     id: 36, 
-    image: '/Es36.avif', 
+    image: './Es36.avif', 
     category: 'ĐỘI NGŨ PHÁT TRIỂN', 
     date: '6/10/2025',
     title: 'ARAM Hỗn Loạn, Smurf và Cập Nhật Khác Từ ĐNPT', 
@@ -257,7 +257,7 @@ const newsData = [
   },
   {
     id: 37, 
-    image: '/Es37.avif', 
+    image: './Es37.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '27/2/2026',
     title: 'Shyvana, Long Nữ', 
@@ -265,7 +265,7 @@ const newsData = [
   },
   {
     id: 38, 
-    image: '/Es38.avif', 
+    image: './Es38.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '4/2/2026',
     title: 'Trailer Tết Nguyên Đán 2026', 
@@ -273,7 +273,7 @@ const newsData = [
   },
   {
     id: 39, 
-    image: '/Es39.avif', 
+    image: './Es39.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '7/1/2026',
     title: 'Sự Cứu Rỗi | Phim Ngắn Mùa 1 2026', 
@@ -281,7 +281,7 @@ const newsData = [
   },
   {
     id: 40, 
-    image: '/Es40.avif', 
+    image: './Es40.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '20/11/2025',
     title: 'Nhạc Chủ Đề Tướng Zaahen', 
@@ -289,7 +289,7 @@ const newsData = [
   },
   {
     id: 41, 
-    image: '/Es41.avif', 
+    image: './Es41.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '15/11/2025',
     title: 'Phim Ngắn Mini K/DA Ahri Đột Phá', 
@@ -297,7 +297,7 @@ const newsData = [
   },
   {
     id: 42, 
-    image: '/Es42.avif', 
+    image: './Es42.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '9/11/2025',
     title: 'Phim Ngắn ĐTCL: Truyền Thuyết & Huyền Thoại', 
@@ -305,7 +305,7 @@ const newsData = [
   },
   {
     id: 43, 
-    image: '/Es43.avif', 
+    image: './Es43.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '7/11/2025',
     title: 'Phim Ngắn Mùa 3: Hoàng Hôn Lụi Tàn', 
@@ -313,7 +313,7 @@ const newsData = [
   },
   {
     id: 44, 
-    image: '/Es44.avif', 
+    image: './Es44.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '13/10/2025',
     title: 'Video Âm Nhạc Bài Hát Chủ Đề CKTG 2025', 
@@ -321,7 +321,7 @@ const newsData = [
   },
   {
     id: 45, 
-    image: '/Es45.avif', 
+    image: './Es45.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '29/8/2025',
     title: 'Nhạc Chủ Đề Tướng Xin Zhao', 
@@ -329,7 +329,7 @@ const newsData = [
   },
   {
     id: 46, 
-    image: '/Es46.avif', 
+    image: './Es46.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '25/8/2025',
     title: 'Bắt Đầu Từ Kết Thúc', 
@@ -337,7 +337,7 @@ const newsData = [
   },
   {
     id: 47, 
-    image: '/Es47.avif', 
+    image: './Es47.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '19/7/2025',
     title: 'Nhạc Chủ Đề Tướng Yunara', 
@@ -345,7 +345,7 @@ const newsData = [
   },
   {
     id: 48, 
-    image: '/Es48.avif', 
+    image: './Es48.avif', 
     category: 'TRUYỀN THÔNG', 
     date: '11/7/2025',
     title: 'Mở Đầu K.O. Đại Chiến Anh Hùng | Phim Ngắn Mùa', 
@@ -353,7 +353,7 @@ const newsData = [
   },
   {
     id: 49, 
-    image: '/Es49.avif', 
+    image: './Es49.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '28/8/2025',
     title: 'K.O. Coliseum Community Zine', 
@@ -361,7 +361,7 @@ const newsData = [
   },
   {
     id: 50, 
-    image: '/Es50.avif', 
+    image: './Es50.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '13/5/2025',
     title: 'Ăn Mừng Sự Kiện Sắc Màu Hân Hoan 2025: LMHT & ĐTCL', 
@@ -369,7 +369,7 @@ const newsData = [
   },
   {
     id: 51, 
-    image: '/Es51.avif', 
+    image: './Es51.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '21/10/2024',
     title: 'Tiêu Điểm Son Heung-min', 
@@ -377,7 +377,7 @@ const newsData = [
   },
   {
     id: 52, 
-    image: '/Es52.avif', 
+    image: './Es52.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '23/9/2024',
     title: 'Ngày Tôn Vinh Người Chơi LMHT', 
@@ -385,7 +385,7 @@ const newsData = [
   },
   {
     id: 53, 
-    image: '/Es53.avif', 
+    image: './Es53.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '25/5/2024',
     title: 'Lee Sin - Tác Phẩm Cộng Đồng', 
@@ -393,7 +393,7 @@ const newsData = [
   },
   {
     id: 54, 
-    image: '/Es54.avif', 
+    image: './Es54.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '13/5/2024',
     title: 'Ăn Mừng Sự Kiện Sắc Màu Hân Hoan 2024: LMHT & ĐTCL', 
@@ -401,7 +401,7 @@ const newsData = [
   },
   {
     id: 55, 
-    image: '/Es55.avif', 
+    image: './Es55.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '16/4/2024',
     title: 'Danh Hiệu Game Của Năm Đã Rất Gần', 
@@ -409,7 +409,7 @@ const newsData = [
   },
   {
     id: 56, 
-    image: '/Es56.avif', 
+    image: './Es56.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '24/11/2023',
     title: 'Cất lên tiếng nói của bạn. Lựa chọn tổ chức từ thiện bạn muốn.', 
@@ -417,7 +417,7 @@ const newsData = [
   },
   {
     id: 57, 
-    image: '/Es57.avif', 
+    image: './Es57.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '3/10/2023',
     title: 'Cùng Bình Chọn Chủ Đề Cho Trang Bị Mới!', 
@@ -425,7 +425,7 @@ const newsData = [
   },
   {
     id: 58, 
-    image: '/Es58.avif', 
+    image: './Es58.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '3/10/2023',
     title: 'Bình Chọn Chủ Đề Cho Trang Bị Mới!', 
@@ -433,7 +433,7 @@ const newsData = [
   },
   {
     id: 59, 
-    image: '/Es59.avif', 
+    image: './Es59.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '12/8/2023',
     title: 'Hướng Dẫn Cosplay Tinh Võ Sư: Vòng 2', 
@@ -441,7 +441,7 @@ const newsData = [
   },
   {
     id: 60, 
-    image: '/Es60.avif', 
+    image: './Es60.avif', 
     category: 'CỘNG ĐỒNG', 
     date: '27/7/2023',
     title: 'Hướng Dẫn Cosplay Tinh Võ Sư: Vòng 1', 
@@ -449,7 +449,7 @@ const newsData = [
   },
   {
     id: 61, 
-    image: '/Es61.avif', 
+    image: './Es61.avif', 
     category: 'RIOT GAMES', 
     date: '17/1/2025',
     title: 'Hỗ Trợ Cứu Trợ Cháy Rừng Ở LA', 
@@ -457,7 +457,7 @@ const newsData = [
   },
   {
     id: 62, 
-    image: '/Es62.avif', 
+    image: './Es62.avif', 
     category: 'RIOT GAMES', 
     date: '20/5/2024',
     title: 'BÀI KIỂM TRA SỨC MẠNH CUỐI CÙNG | MSI 2024', 
@@ -465,7 +465,7 @@ const newsData = [
   },
   {
     id: 63, 
-    image: '/Es63.avif', 
+    image: './Es63.avif', 
     category: 'RIOT GAMES', 
     date: '9/12/2022',
     title: 'Liên Kết Tài Khoản Riot & Xbox Game Pass Ngay Để Mở Đặc Quyền', 
@@ -474,16 +474,16 @@ const newsData = [
 ];
 
 const championData = [
-  { id: 1, image: '/Garen.jpg', name: 'GAREN', title: 'SỨC MẠNH CỦA DEMACIA', role: 'ĐẤU SĨ' },
-  { id: 2, image: '/Ashe.jpg', name: 'ASHE', title: 'CUNG THỦ BĂNG GIÁ', role: 'XẠ THỦ' },
-  { id: 3, image: '/Lux.jpg', name: 'LUX', title: 'TIỂU THƯ ÁNH SÁNG', role: 'PHÁP SƯ' },
-  { id: 4, image: '/Jinx.jpg', name: 'JINX', title: 'KHẨU PHÁO NỔI LOẠN', role: 'XẠ THỦ' }
+  { id: 1, image: './Garen.jpg', name: 'GAREN', title: 'SỨC MẠNH CỦA DEMACIA', role: 'ĐẤU SĨ' },
+  { id: 2, image: './Ashe.jpg', name: 'ASHE', title: 'CUNG THỦ BĂNG GIÁ', role: 'XẠ THỦ' },
+  { id: 3, image: './Lux.jpg', name: 'LUX', title: 'TIỂU THƯ ÁNH SÁNG', role: 'PHÁP SƯ' },
+  { id: 4, image: './Jinx.jpg', name: 'JINX', title: 'KHẨU PHÁO NỔI LOẠN', role: 'XẠ THỦ' }
 ];
 
 const gameModes = [
-  { id: 0, thumb: '/mode1-thumb.jpg', video: '/mode1-vid.mp4' },
-  { id: 1, thumb: '/mode2-thumb.jpg', video: '/mode2-vid.mp4' },
-  { id: 2, thumb: '/mode3-thumb.jpg', video: '/mode3-vid.mp4' }
+  { id: 0, thumb: './mode1-thumb.jpg', video: './mode1-vid.mp4' },
+  { id: 1, thumb: './mode2-thumb.jpg', video: './mode2-vid.mp4' },
+  { id: 2, thumb: './mode3-thumb.jpg', video: './mode3-vid.mp4' }
 ];
 
 // ==========================================
@@ -504,7 +504,7 @@ function Header({ onOpenModal, isLoggedIn, handleLogout }) {
             </div>
             <div className="separator-line"></div>
             <div className="lol-logo-wrapper" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-              <img src="/LOGO_LOL-removebg-preview.png" alt="LOL Logo" className="lol-icon-img" />
+              <img src="./LOGO_LOL-removebg-preview.png" alt="LOL Logo" className="lol-icon-img" />
             </div>
           </div>
 
@@ -565,7 +565,7 @@ function Header({ onOpenModal, isLoggedIn, handleLogout }) {
       <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-header">
           <div className="mobile-logo-wrap">
-             <img src="/LOGO_LOL-removebg-preview.png" alt="LOL" className="mobile-lol-logo" />
+             <img src="./LOGO_LOL-removebg-preview.png" alt="LOL" className="mobile-lol-logo" />
              <span className="mobile-logo-text">LEAGUE OF LEGENDS</span>
           </div>
           <button className="mobile-close-btn" onClick={() => setIsMobileMenuOpen(false)}>✕</button>
@@ -601,7 +601,7 @@ function HeroSection({ onOpenModal }) {
   return (
     <section className="hero-container">
       <video autoPlay loop muted className="hero-video">
-        <source src="/videoplayback.mp4" type="video/mp4" />
+        <source src="./videoplayback.mp4" type="video/mp4" />
       </video>
       <div className="hero-overlay"></div>
       <div className="hero-content">
@@ -619,7 +619,7 @@ function FinalCtaSection({ onOpenModal }) {
   return (
     <section className="final-cta-container">
       <video autoPlay loop muted className="final-cta-video">
-        <source src="/final-video.mp4" type="video/mp4" />
+        <source src="./final-video.mp4" type="video/mp4" />
       </video>
       <div className="final-cta-overlay"></div>
       <div className="final-cta-content">
@@ -702,7 +702,7 @@ function SkinSection() {
       <div className="skin-container">
         <div className="skin-image-col">
           <div className="gold-frame"></div>
-          <img src="/5bfcb6ba05ba33d7363258a98bec2956-removebg-preview.png" alt="Akali Skin" className="character-img" />
+          <img src="./5bfcb6ba05ba33d7363258a98bec2956-removebg-preview.png" alt="Akali Skin" className="character-img" />
         </div>
         <div className="skin-text-col">
           <h4 className="skin-subtitle">HẠ GỤC KẺ ĐỊCH</h4>
@@ -769,8 +769,8 @@ function Footer() {
         <div className="social-circle">yt</div>
       </div>
       <div className="partner-logos">
-        <img src="/riot-gray-removebg-preview.png" alt="Riot Games" className="riot-footer-logo" />
-        <img src="/vng-logo.png" alt="VNG Games" className="footer-logo" />
+        <img src="./riot-gray-removebg-preview.png" alt="Riot Games" className="riot-footer-logo" />
+        <img src="./vng-logo.png" alt="VNG Games" className="footer-logo" />
       </div>
       <div className="footer-legal-text">
         <p>© 2009-2022 bởi Tập Đoàn Riot Games.</p>
@@ -781,7 +781,7 @@ function Footer() {
         <span className="bottom-link">TÙY CHỌN COOKIES</span>
       </div>
       <div className="age-warning">
-        <img src="/age-18.png" alt="18+" className="age-img" />
+        <img src="./age-18.png" alt="18+" className="age-img" />
       </div>
     </footer>
   );
@@ -848,7 +848,7 @@ function AppContent() {
                   className="btn-create-acc" 
                   onClick={() => {
                     setIsPlayModalOpen(false);
-                    window.location.href = '/tao-tai-khoan'; 
+                    navigate('/tao-tai-khoan'); 
                   }}
                 >
                   TẠO TÀI KHOẢN
@@ -857,7 +857,10 @@ function AppContent() {
               <div className="play-modal-option">
                 <p>Tôi có Tài Khoản Riot</p>
                 {/* Đã cập nhật class tại đây để ăn CSS nút bo tròn */}
-                <button className="btn-login-acc-modal" onClick={() => window.location.href='/dang-nhap'}>
+                <button className="btn-login-acc-modal" onClick={() => {
+                      setIsPlayModalOpen(false);
+                      navigate('/dang-nhap');
+                }}>
                   ĐĂNG NHẬP
                 </button>
               </div>
